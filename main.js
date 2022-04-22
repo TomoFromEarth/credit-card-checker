@@ -50,23 +50,44 @@ const findInvalidCards = nestedArr => {
     })
         console.log(invalidCards);
 };
-      console.log(validateCred(valid1))
-      console.log(validateCred(valid2))
-      console.log(validateCred(valid3))
-      console.log(validateCred(valid4))
-      console.log(validateCred(valid5))
-      console.log(validateCred(invalid1))
-      console.log(validateCred(invalid2))
-      console.log(validateCred(invalid3))
-      console.log(validateCred(invalid4))
-      console.log(validateCred(invalid5))
-      console.log(validateCred(mystery1))
-      console.log(validateCred(mystery2))
-      console.log(validateCred(mystery3))
-      console.log(validateCred(mystery4))
-      console.log(validateCred(mystery5))
-      console.log(findInvalidCards(batch))
 
+//identify invalid card company numbers
+const idInvalidCardCompanies = invCards => {
+    switch (invCards) {
+      case invCards.indexOf(0) === 3:
+        return `Amex (American Express)`
+        break;
+      case invCards.indexOf(0) === 4:
+        return `Visa`
+        break;
+      case invCards.indexOf(0) === 5:
+        return `Mastercard`
+        break;
+      case invCards.indexOf(0) === 6:
+        return `Discover`
+        break;
+      default:
+        return `Company Not Found`
+        break;
+    }
+  };
+console.log(validateCred(valid1))
+console.log(validateCred(valid2))
+console.log(validateCred(valid3))
+console.log(validateCred(valid4))
+console.log(validateCred(valid5))
+console.log(validateCred(invalid1))
+console.log(validateCred(invalid2))
+console.log(validateCred(invalid3))
+console.log(validateCred(invalid4))
+console.log(validateCred(invalid5))
+console.log(validateCred(mystery1))
+console.log(validateCred(mystery2))
+console.log(validateCred(mystery3))
+console.log(validateCred(mystery4))
+console.log(validateCred(mystery5))
+console.log(findInvalidCards(batch))
+console.log(idInvalidCardCompanies(batch))   
 
 
 
