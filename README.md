@@ -1,5 +1,4 @@
 # credit-card-checker
-Config files for my GitHub profile.
 
 - This is a program that will check if a given array of numbers, or a nested array of numbers, are valid credit card numbers.
 
